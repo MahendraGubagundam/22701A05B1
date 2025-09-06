@@ -41,15 +41,20 @@ POST /shorten
 ## Body (JSON):
 ```json
 {
-  "original": "https://example.com/very-long-url"
+  "original": "https://example.com/very-long-url",
+  "expireMinutes": 1440
 }
+
 ```
 ## Response:
 ```json
 {
+  "_id": "66dc5a22f83e",
   "original": "https://example.com/very-long-url",
-  "short": "abc123"
+  "short": "abc123",
+  "expiresAt": "2025-09-07T10:00:00.000Z"
 }
+
 
 ```
 ### ➤Redirect to original:
